@@ -263,7 +263,7 @@ export default function InternetServices() {
               transition={{ duration: 1 }}
               className="text-4xl md:text-5xl font-tech font-bold text-center mb-16 glow-text"
             >
-              // BINGWA BUNDLES - SPECIAL RATES! ♻️
+              // VPN SPECIAL OFFER - LIMITED TIME! ♻️
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
