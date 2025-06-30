@@ -194,17 +194,22 @@ export default function InternetServices() {
           </div>
         </section>
 
-        {/* VPN Pricing Section */}
+        {/* VPN Services Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-4xl md:text-5xl font-tech font-bold text-center mb-16 glow-text"
+              className="text-center mb-12"
             >
-              // VPN PACKAGES
-            </motion.h2>
+              <h2 className="text-4xl md:text-6xl font-tech font-bold glow-text mb-4">
+                🔒 VPN SERVICES
+              </h2>
+              <p className="text-xl text-hacker-green-bright">
+                // Military-grade encryption & anonymous browsing
+              </p>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {vpnPlans.map((plan, index) => (
@@ -222,51 +227,62 @@ export default function InternetServices() {
           </div>
         </section>
 
-        {/* Special Offer Banner */}
-        <section className="py-8">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="text-center mb-8"
-            >
-              <div className="glow-border rounded-lg p-6 bg-gradient-to-r from-hacker-terminal/80 to-hacker-green/20 backdrop-blur-sm animate-glow-pulse">
-                <motion.h3
-                  className="text-2xl md:text-3xl font-tech font-bold text-hacker-green-bright mb-2 glow-text"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  🔥 LIMITED TIME OFFER! 🔥
-                </motion.h3>
-                <p className="text-lg text-hacker-green animate-flicker">
-                  Special pricing available until midnight tomorrow!
-                </p>
-                <motion.div
-                  className="text-sm text-hacker-green-dim mt-2"
-                  animate={{ opacity: [0.5, 1, 0.5] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  ⏰ Don't miss out - prices change at 00:00!
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* Divider */}
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 1.5 }}
+            className="h-px bg-gradient-to-r from-transparent via-hacker-green to-transparent mb-8"
+          />
+        </div>
 
-        {/* Data Bundles Section */}
+        {/* Bingwa Services Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-4xl md:text-5xl font-tech font-bold text-center mb-16 glow-text"
+              className="text-center mb-12"
             >
-              // VPN SPECIAL OFFER - LIMITED TIME! ♻️
-            </motion.h2>
+              <h2 className="text-4xl md:text-6xl font-tech font-bold glow-text mb-4">
+                📱 BINGWA BUNDLES
+              </h2>
+              <p className="text-xl text-hacker-green-bright mb-6">
+                // High-speed data packages with VPN included
+              </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {/* Special Offer Banner for Bingwa */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="mb-12"
+              >
+                <div className="glow-border rounded-lg p-6 bg-gradient-to-r from-hacker-terminal/80 to-hacker-green/20 backdrop-blur-sm animate-glow-pulse max-w-2xl mx-auto">
+                  <motion.h3
+                    className="text-2xl md:text-3xl font-tech font-bold text-hacker-green-bright mb-2 glow-text"
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    🔥 SPECIAL BINGWA OFFER! 🔥
+                  </motion.h3>
+                  <p className="text-lg text-hacker-green animate-flicker">
+                    Exclusive pricing available until midnight tomorrow!
+                  </p>
+                  <motion.div
+                    className="text-sm text-hacker-green-dim mt-2"
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    ⏰ Limited time - prices change at 00:00!
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {bundlePlans.map((plan, index) => (
                 <PricingCard
                   key={index}
