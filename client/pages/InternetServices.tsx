@@ -161,10 +161,10 @@ export default function InternetServices() {
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-6xl font-tech font-bold glow-text mb-4">
-                📱 BINGWA BUNDLES
+                🔒 VPN PACKAGES
               </h2>
               <p className="text-xl text-hacker-green-bright mb-6">
-                // High-speed data packages with VPN included
+                // Military-grade encryption & anonymous browsing
               </p>
 
               {/* Special Offer Banner for Bingwa */}
