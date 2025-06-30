@@ -1,8 +1,8 @@
-"homepage": "https://anonymiketech.surge.sh",
 {
   "name": "fusion-starter",
   "private": true,
   "type": "module",
+  "homepage": "https://anonymiketech.surge.sh",
   "pkg": {
     "assets": [
       "dist/spa/*"
