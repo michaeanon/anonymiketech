@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   title: string;
@@ -7,6 +8,7 @@ interface ServiceCardProps {
   icon: ReactNode;
   features: string[];
   delay?: number;
+  link?: string;
 }
 
 export default function ServiceCard({
@@ -15,6 +17,7 @@ export default function ServiceCard({
   icon,
   features,
   delay = 0,
+  link,
 }: ServiceCardProps) {
   return (
     <motion.div
