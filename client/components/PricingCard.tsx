@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
+import { useState } from "react";
+import PaymentModal from "./PaymentModal";
 
 interface PricingCardProps {
   title: string;
@@ -8,7 +10,6 @@ interface PricingCardProps {
   features: string[];
   popular?: boolean;
   delay?: number;
-  contactUrl?: string;
 }
 
 export default function PricingCard({
@@ -18,8 +19,8 @@ export default function PricingCard({
   features,
   popular = false,
   delay = 0,
-  contactUrl = "https://wa.me/+254113313240",
 }: PricingCardProps) {
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
