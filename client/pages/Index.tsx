@@ -183,7 +183,7 @@ export default function Index() {
             animate={{ opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            // HACKING SERVICES
+            // WHAT I DO
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
