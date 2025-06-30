@@ -180,7 +180,7 @@ export default function InternetServices() {
                     animate={{ scale: [1, 1.05, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    🔥 SPECIAL BINGWA OFFER! 🔥
+                    🔥 SPECIAL VPN OFFER! 🔥
                   </motion.h3>
                   <p className="text-lg text-hacker-green animate-flicker">
                     Exclusive pricing available until midnight tomorrow!
