@@ -73,6 +73,7 @@ export default function Index() {
         "Secure Anonymous Browsing",
         "24/7 Connection Support",
       ],
+      link: "/internet-services",
     },
     {
       title: "Web Development & Design",
@@ -86,6 +87,7 @@ export default function Index() {
         "Fast Deployment",
         "SEO Optimization",
       ],
+      link: "/web-development",
     },
     {
       title: "WhatsApp Bots & AI Chatbots",
@@ -99,6 +101,7 @@ export default function Index() {
         "Automated Responses",
         "Business Integration",
       ],
+      link: "/chatbots-ai",
     },
     {
       title: "Social Media Boosting",
@@ -112,6 +115,7 @@ export default function Index() {
         "Growth Analytics",
         "Brand Strategy",
       ],
+      link: "/social-media-boosting",
     },
   ];
 
