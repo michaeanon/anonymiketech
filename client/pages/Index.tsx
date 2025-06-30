@@ -194,6 +194,7 @@ export default function Index() {
                 description={service.description}
                 icon={service.icon}
                 features={service.features}
+                link={service.link}
                 delay={3.5 + index * 0.2}
               />
             ))}
