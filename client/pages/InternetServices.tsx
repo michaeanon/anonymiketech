@@ -39,49 +39,6 @@ export default function InternetServices() {
     },
   ];
 
-  const vpnPlans = [
-    {
-      title: "Basic VPN",
-      price: "KSH 500",
-      period: "week",
-      features: [
-        "5 Device Connections",
-        "Basic Server Access",
-        "Standard Encryption",
-        "Email Support",
-        "Kill Switch Protection",
-      ],
-    },
-    {
-      title: "Pro VPN",
-      price: "KSH 1,500",
-      period: "month",
-      popular: true,
-      features: [
-        "Unlimited Devices",
-        "Premium Server Access",
-        "Military-Grade Encryption",
-        "24/7 Priority Support",
-        "Advanced Kill Switch",
-        "Split Tunneling",
-        "Ad & Malware Blocking",
-      ],
-    },
-    {
-      title: "Elite VPN",
-      price: "KSH 4,000",
-      period: "3 months",
-      features: [
-        "Everything in Pro",
-        "Dedicated IP Address",
-        "Personal Server Setup",
-        "Custom Configuration",
-        "VIP Support Channel",
-        "Advanced Analytics",
-      ],
-    },
-  ];
-
   const bundlePlans = [
     {
       title: "♻️ WEEKLY OFFER",
