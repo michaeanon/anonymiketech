@@ -194,49 +194,6 @@ export default function InternetServices() {
           </div>
         </section>
 
-        {/* VPN Services Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl md:text-6xl font-tech font-bold glow-text mb-4">
-                🔒 VPN SERVICES
-              </h2>
-              <p className="text-xl text-hacker-green-bright">
-                // Military-grade encryption & anonymous browsing
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {vpnPlans.map((plan, index) => (
-                <PricingCard
-                  key={index}
-                  title={plan.title}
-                  price={plan.price}
-                  period={plan.period}
-                  features={plan.features}
-                  popular={plan.popular}
-                  delay={index * 0.2}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.5 }}
-            className="h-px bg-gradient-to-r from-transparent via-hacker-green to-transparent mb-8"
-          />
-        </div>
-
         {/* Bingwa Services Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
