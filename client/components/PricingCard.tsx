@@ -87,10 +87,8 @@ export default function PricingCard({
         transition={{ delay: delay + 0.5 }}
         className="text-center"
       >
-        <a
-          href={contactUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => setIsPaymentModalOpen(true)}
           className={`inline-block w-full py-4 px-6 rounded-lg font-tech font-bold transition-all duration-300 ${
             popular
               ? "bg-hacker-green text-hacker-bg hover:bg-hacker-green-bright hover:animate-glow-pulse"
@@ -98,8 +96,16 @@ export default function PricingCard({
           }`}
         >
           Get Started
-        </a>
+        </button>
       </motion.div>
+
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={() => setIsPaymentModalOpen(false)}
+        packageTitle={title}
+        price={price}
+        period={period}
+      />
     </motion.div>
   );
 }
