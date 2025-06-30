@@ -59,9 +59,18 @@ export default function ServiceCard({
       </ul>
 
       <div className="mt-6 text-center">
-        <button className="px-4 py-2 glow-border rounded bg-hacker-terminal hover:bg-hacker-green hover:text-hacker-bg transition-all duration-300 font-tech text-hacker-green-bright hover:animate-glow-pulse">
-          Learn More
-        </button>
+        {link ? (
+          <Link
+            to={link}
+            className="inline-block px-4 py-2 glow-border rounded bg-hacker-terminal hover:bg-hacker-green hover:text-hacker-bg transition-all duration-300 font-tech text-hacker-green-bright hover:animate-glow-pulse"
+          >
+            Learn More
+          </Link>
+        ) : (
+          <button className="px-4 py-2 glow-border rounded bg-hacker-terminal hover:bg-hacker-green hover:text-hacker-bg transition-all duration-300 font-tech text-hacker-green-bright hover:animate-glow-pulse">
+            Learn More
+          </button>
+        )}
       </div>
     </motion.div>
   );
