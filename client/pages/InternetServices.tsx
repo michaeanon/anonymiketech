@@ -307,85 +307,65 @@ export default function InternetServices() {
                   </div>
                 </div>
 
-                {/* Quick M-Pesa Payment Buttons */}
-                <div className="text-center mb-8">
-                  <h4 className="font-tech font-bold text-hacker-green-bright mb-4">
-                    ⚡ QUICK M-PESA PAYMENT
-                  </h4>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    {/* USSD Button */}
-                    <button
-                      onClick={() => {
-                        // Try to open USSD dialer
-                        if (navigator.userAgent.match(/Android/i)) {
-                          // For Android, try to open dialer with USSD
+                {/* Quick M-Pesa Payment Buttons - Only show on mobile */}
+                {isMobile && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-8"
+                  >
+                    <h4 className="font-tech font-bold text-hacker-green-bright mb-4">
+                      ⚡ QUICK M-PESA PAYMENT
+                    </h4>
+                    <div className="flex flex-col gap-3">
+                      {/* USSD Button */}
+                      <button
+                        onClick={() => {
+                          // Try to open USSD dialer
                           window.location.href = "tel:*334%23";
-                        } else {
-                          // Fallback: copy USSD code and show instructions
-                          navigator.clipboard.writeText("*334#");
-                          alert(
-                            "M-Pesa USSD code *334# copied! Dial it on your phone to access M-Pesa menu.",
-                          );
-                        }
-                      }}
-                      className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse"
-                    >
-                      📞 Dial *334#
-                    </button>
+                        }}
+                        className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse w-full"
+                      >
+                        📞 Dial *334# (M-Pesa Menu)
+                      </button>
 
-                    {/* M-Pesa App Button */}
-                    <button
-                      onClick={() => {
-                        // Try to open M-Pesa app
-                        const mpesaAppUrl = "mpesa://";
-                        const fallbackUrl =
-                          "https://play.google.com/store/apps/details?id=com.safaricom.mpesa";
+                      {/* M-Pesa App Button */}
+                      <button
+                        onClick={() => {
+                          // Try to open M-Pesa app
+                          const mpesaAppUrl = "mpesa://";
+                          const fallbackUrl =
+                            "https://play.google.com/store/apps/details?id=com.safaricom.mpesa";
 
-                        const isAndroid = navigator.userAgent.match(/Android/i);
-                        const isIOS =
-                          navigator.userAgent.match(/iPhone|iPad|iPod/i);
-
-                        if (isAndroid || isIOS) {
-                          // Try to open app, fallback to store
+                          // Try to open app, fallback to store after delay
                           window.location.href = mpesaAppUrl;
                           setTimeout(() => {
                             window.location.href = fallbackUrl;
                           }, 1500);
-                        } else {
-                          // For desktop, show instructions
-                          alert(
-                            "Please use your mobile device to access the M-Pesa app or dial *334# to access M-Pesa services.",
-                          );
-                        }
-                      }}
-                      className="flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse"
-                    >
-                      📱 Open M-Pesa App
-                    </button>
+                        }}
+                        className="flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-4 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse w-full"
+                      >
+                        📱 Open M-Pesa App
+                      </button>
 
-                    {/* Send Money Quick Link */}
-                    <button
-                      onClick={() => {
-                        // Create send money USSD with pre-filled number
-                        const sendMoneyUSSD = "*334*1*0113313240#";
-                        if (navigator.userAgent.match(/Android/i)) {
+                      {/* Send Money Quick Link */}
+                      <button
+                        onClick={() => {
+                          // Create send money USSD with pre-filled number
+                          const sendMoneyUSSD = "*334*1*0113313240#";
                           window.location.href = `tel:${encodeURIComponent(sendMoneyUSSD)}`;
-                        } else {
-                          navigator.clipboard.writeText(sendMoneyUSSD);
-                          alert(
-                            `Send Money USSD copied: ${sendMoneyUSSD}\nDial this on your phone to send money directly!`,
-                          );
-                        }
-                      }}
-                      className="flex items-center justify-center gap-2 bg-hacker-green hover:bg-hacker-green-bright text-hacker-bg px-6 py-3 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse"
-                    >
-                      💸 Quick Send Money
-                    </button>
-                  </div>
-                  <p className="text-xs text-hacker-green-dim mt-2">
-                    These buttons work best on mobile devices
-                  </p>
-                </div>
+                        }}
+                        className="flex items-center justify-center gap-2 bg-hacker-green hover:bg-hacker-green-bright text-hacker-bg px-6 py-4 rounded-lg font-tech font-bold transition-all duration-300 hover:animate-glow-pulse w-full"
+                      >
+                        💸 Quick Send to 0113313240
+                      </button>
+                    </div>
+                    <p className="text-xs text-hacker-green-bright mt-3 animate-pulse">
+                      🚀 Tap any button above for instant M-Pesa access!
+                    </p>
+                  </motion.div>
+                )}
 
                 <div className="text-center space-y-4">
                   <div className="border-t border-hacker-green/30 pt-6">
