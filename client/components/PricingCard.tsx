@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
-import { useState } from "react";
-import MpesaPopup from "./MpesaPopup";
 
 interface PricingCardProps {
   title: string;
@@ -20,7 +18,11 @@ export default function PricingCard({
   popular = false,
   delay = 0,
 }: PricingCardProps) {
-  const [isMpesaPopupOpen, setIsMpesaPopupOpen] = useState(false);
+  // Generate WhatsApp message for payment request
+  const generateWhatsAppMessage = () => {
+    const message = `Hi! I want to purchase the ${title} package for ${price}/${period}. Please send me payment instructions.`;
+    return `https://wa.me/+254113313240?text=${encodeURIComponent(message)}`;
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
