@@ -88,20 +88,20 @@ export default function PricingCard({
         className="text-center"
       >
         <button
-          onClick={() => setIsPaymentModalOpen(true)}
+          onClick={() => setIsMpesaPopupOpen(true)}
           className={`inline-block w-full py-4 px-6 rounded-lg font-tech font-bold transition-all duration-300 ${
             popular
               ? "bg-hacker-green text-hacker-bg hover:bg-hacker-green-bright hover:animate-glow-pulse"
               : "glow-border bg-hacker-terminal text-hacker-green-bright hover:bg-hacker-green hover:text-hacker-bg"
           }`}
         >
-          Get Started
+          🚀 Get Started
         </button>
       </motion.div>
 
-      <PaymentModal
-        isOpen={isPaymentModalOpen}
-        onClose={() => setIsPaymentModalOpen(false)}
+      <MpesaPopup
+        isOpen={isMpesaPopupOpen}
+        onClose={() => setIsMpesaPopupOpen(false)}
         packageTitle={title}
         price={price}
         period={period}
