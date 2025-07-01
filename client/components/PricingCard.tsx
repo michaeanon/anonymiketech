@@ -89,25 +89,19 @@ export default function PricingCard({
         transition={{ delay: delay + 0.5 }}
         className="text-center"
       >
-        <button
-          onClick={() => setIsMpesaPopupOpen(true)}
-          className={`inline-block w-full py-4 px-6 rounded-lg font-tech font-bold transition-all duration-300 ${
+        <a
+          href={generateWhatsAppMessage()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-block w-full py-4 px-6 rounded-lg font-tech font-bold transition-all duration-300 text-center ${
             popular
               ? "bg-hacker-green text-hacker-bg hover:bg-hacker-green-bright hover:animate-glow-pulse"
               : "glow-border bg-hacker-terminal text-hacker-green-bright hover:bg-hacker-green hover:text-hacker-bg"
           }`}
         >
-          🚀 Get Started
-        </button>
+          💬 Get Started
+        </a>
       </motion.div>
-
-      <MpesaPopup
-        isOpen={isMpesaPopupOpen}
-        onClose={() => setIsMpesaPopupOpen(false)}
-        packageTitle={title}
-        price={price}
-        period={period}
-      />
     </motion.div>
   );
 }
