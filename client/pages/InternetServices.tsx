@@ -1,11 +1,29 @@
 import { Shield, Lock, Globe, Zap, Server, Eye } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import MatrixRain from "../components/MatrixRain";
 import ServiceHero from "../components/ServiceHero";
 import PricingCard from "../components/PricingCard";
 import ContactButtons from "../components/ContactButtons";
 
 export default function InternetServices() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const userAgent = navigator.userAgent;
+      const mobileRegex =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      const isMobileDevice = mobileRegex.test(userAgent);
+      const isSmallScreen = window.innerWidth <= 768;
+      setIsMobile(isMobileDevice || isSmallScreen);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
   const features = [
     {
       icon: <Lock className="w-8 h-8" />,
