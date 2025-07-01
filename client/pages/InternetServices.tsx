@@ -5,6 +5,7 @@ import MatrixRain from "../components/MatrixRain";
 import ServiceHero from "../components/ServiceHero";
 import PricingCard from "../components/PricingCard";
 import ContactButtons from "../components/ContactButtons";
+import MobileMenu from "../components/MobileMenu";
 
 export default function InternetServices() {
   const [isMobile, setIsMobile] = useState(false);
