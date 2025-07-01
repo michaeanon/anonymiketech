@@ -209,6 +209,102 @@ export default function InternetServices() {
                 />
               ))}
             </div>
+
+            {/* Payment Options Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl md:text-4xl font-tech font-bold text-center mb-8 glow-text">
+                💳 PAYMENT OPTIONS
+              </h3>
+              <div className="glow-border rounded-lg p-8 bg-hacker-terminal/50 backdrop-blur-sm max-w-4xl mx-auto">
+                <div className="text-center mb-6">
+                  <div className="text-hacker-green-bright font-tech text-lg mb-4">
+                    🔃🔃🔃🔃🔃🔃
+                  </div>
+                  <h4 className="text-xl font-tech font-bold text-hacker-green-bright mb-6">
+                    PAYMENT DETAILS
+                  </h4>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  {/* Send Money */}
+                  <div className="glow-border rounded-lg p-6 bg-hacker-bg/50 text-center">
+                    <div className="text-hacker-green mb-3">📱</div>
+                    <h5 className="font-tech font-bold text-hacker-green-bright mb-2">
+                      Send Money
+                    </h5>
+                    <div className="bg-hacker-terminal rounded p-3 font-tech text-hacker-green-bright mb-2">
+                      0113313240
+                    </div>
+                    <p className="text-sm text-hacker-green-dim">
+                      Direct M-Pesa Transfer
+                    </p>
+                  </div>
+
+                  {/* Till Number */}
+                  <div className="glow-border rounded-lg p-6 bg-hacker-bg/50 text-center">
+                    <div className="text-hacker-green mb-3">💳</div>
+                    <h5 className="font-tech font-bold text-hacker-green-bright mb-2">
+                      Till Number
+                    </h5>
+                    <div className="bg-hacker-terminal rounded p-3 font-tech text-hacker-green-bright mb-2">
+                      4930086
+                    </div>
+                    <p className="text-sm text-hacker-green-dim">
+                      Lipa na M-Pesa
+                    </p>
+                  </div>
+
+                  {/* Paybill */}
+                  <div className="glow-border rounded-lg p-6 bg-hacker-bg/50 text-center">
+                    <div className="text-hacker-green mb-3">🏢</div>
+                    <h5 className="font-tech font-bold text-hacker-green-bright mb-2">
+                      Paybill
+                    </h5>
+                    <div className="bg-hacker-terminal rounded p-3 font-tech text-hacker-green-bright mb-2 text-sm">
+                      Business No: 247247
+                      <br />
+                      Account No: 0790181410905
+                    </div>
+                    <p className="text-sm text-hacker-green-dim">
+                      M-Pesa Paybill
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center space-y-4">
+                  <div className="border-t border-hacker-green/30 pt-6">
+                    <h4 className="font-tech font-bold text-hacker-green-bright mb-3">
+                      📸 AFTER PAYMENT:
+                    </h4>
+                    <div className="space-y-3">
+                      <p className="font-tech text-hacker-green-bright">
+                        🔶 Send screenshot of your payment to WhatsApp
+                      </p>
+                      <a
+                        href="https://wa.me/+254113313240"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-hacker-green text-hacker-bg px-6 py-3 rounded-lg font-tech font-bold hover:bg-hacker-green-bright transition-all duration-300 hover:animate-glow-pulse"
+                      >
+                        💬 +254113313240
+                      </a>
+                      <p className="text-hacker-green-bright font-tech">
+                        🔷 <strong>DEVICE ID HTTP INJECTOR</strong> ✅
+                      </p>
+                      <p className="text-sm text-hacker-green-dim">
+                        You'll receive setup instructions after payment
+                        confirmation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
