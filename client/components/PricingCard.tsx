@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import { useState } from "react";
-import PaymentModal from "./PaymentModal";
+import MpesaPopup from "./MpesaPopup";
 
 interface PricingCardProps {
   title: string;
@@ -20,7 +20,7 @@ export default function PricingCard({
   popular = false,
   delay = 0,
 }: PricingCardProps) {
-  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [isMpesaPopupOpen, setIsMpesaPopupOpen] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
