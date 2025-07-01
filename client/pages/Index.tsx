@@ -273,7 +273,7 @@ export default function Index() {
         >
           <div className="glow-border rounded-lg p-6 bg-hacker-terminal/20 backdrop-blur-sm">
             <p className="font-tech text-hacker-green-dim mb-4">
-              © 2024 ANONYMIKETECH - Elite Hacking Services
+              © 2024 ANONYMIKETECH - Digital Innovation & Cyber Excellence
             </p>
             <motion.p
               className="font-tech text-hacker-green"
