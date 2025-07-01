@@ -153,7 +153,7 @@ export default function Index() {
               transition={{ delay: 1.5 }}
               className="text-xl md:text-2xl text-hacker-green-bright mb-8 animate-flicker"
             >
-              // Elite Hacking Services & Tech Solutions
+              // Unleashing Digital Innovation & Cyber Excellence
             </motion.p>
           </div>
         </motion.header>
