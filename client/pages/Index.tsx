@@ -14,6 +14,7 @@ import MatrixRain from "../components/MatrixRain";
 import Terminal from "../components/Terminal";
 import ServiceCard from "../components/ServiceCard";
 import ContactButtons from "../components/ContactButtons";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Index() {
   const [showContent, setShowContent] = useState(false);
