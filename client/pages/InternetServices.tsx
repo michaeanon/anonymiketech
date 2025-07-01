@@ -41,6 +41,19 @@ export default function InternetServices() {
 
   const vpnPlans = [
     {
+      title: "♻️ 3 DAYS TRIAL",
+      price: "KES 50",
+      period: "3 days",
+      features: [
+        "🔒 Trial VPN Access",
+        "🌍 3 Server Locations",
+        "📱 1 Device Connection",
+        "⚡ Standard Speed",
+        "💬 Basic Support",
+        "🛡️ Basic Protection",
+      ],
+    },
+    {
       title: "♻️ WEEKLY VPN",
       price: "KES 80",
       period: "week",
@@ -92,7 +105,7 @@ export default function InternetServices() {
         "🌍 50+ Global Servers",
         "📱 Unlimited Devices",
         "⚡ Maximum Speed",
-        "💬 24/7 VIP Support",
+        "�� 24/7 VIP Support",
         "🛡️ Zero-Log Policy",
         "📊 Real-time Analytics",
         "🔥 Custom Server Setup",
