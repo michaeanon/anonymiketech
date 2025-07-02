@@ -406,6 +406,24 @@ export default function SocialMediaBoosting() {
             </div>
           </div>
         </motion.section>
+
+        {/* Copyright Footer */}
+        <motion.footer
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="py-8 border-t border-hacker-green/20"
+        >
+          <div className="container mx-auto px-4 text-center">
+            <motion.p
+              className="font-tech text-hacker-green-dim hover:text-hacker-green transition-colors duration-300"
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              © anonymiketech_inc@2025
+            </motion.p>
+          </div>
+        </motion.footer>
       </div>
     </div>
   );
