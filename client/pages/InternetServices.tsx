@@ -137,6 +137,7 @@ export default function InternetServices() {
   return (
     <div className="min-h-screen bg-hacker-bg text-hacker-green relative">
       <MobileMenu />
+      <BackToTop />
       <MatrixRain />
 
       <div className="relative z-10">
