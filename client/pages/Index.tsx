@@ -157,7 +157,7 @@ export default function Index() {
               initial={{ opacity: 0 }}
               animate={{ opacity: showContent ? 1 : 0 }}
               transition={{ delay: 1.5 }}
-              className="text-xl md:text-2xl text-hacker-green-bright mb-8 animate-flicker"
+              className="text-lg sm:text-xl md:text-2xl text-hacker-green-bright mb-8 animate-flicker px-4"
             >
               // Unleashing Digital Innovation & Cyber Excellence
             </motion.p>
