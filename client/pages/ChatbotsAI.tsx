@@ -127,6 +127,52 @@ export default function ChatbotsAI() {
         "🔧 Custom Configurations",
       ],
     },
+    {
+      title: "💬 WEBSITE LIVE CHAT AI",
+      price: "KES 500",
+      period: "month",
+      features: [
+        "🌐 Website Integration",
+        "🤖 AI-Powered Responses",
+        "📱 Mobile Responsive",
+        "📊 Chat Analytics",
+        "⚡ Instant Setup",
+        "💬 Basic Support",
+        "🎨 Customizable Widget",
+      ],
+    },
+    {
+      title: "💬 LIVE CHAT AI - 6 MONTHS",
+      price: "KES 3,000",
+      period: "6 months",
+      popular: true,
+      features: [
+        "🌐 Website Integration",
+        "🤖 Advanced AI Responses",
+        "📱 Mobile Responsive",
+        "📊 Advanced Analytics",
+        "⚡ Priority Setup",
+        "💬 Priority Support",
+        "🎨 Full Customization",
+        "💰 Save KES 3,000!",
+      ],
+    },
+    {
+      title: "💬 LIVE CHAT AI - YEARLY",
+      price: "KES 6,000",
+      period: "year",
+      features: [
+        "🌐 Full Website Integration",
+        "🤖 Premium AI Responses",
+        "📱 Mobile & Desktop Optimized",
+        "📊 Comprehensive Analytics",
+        "⚡ VIP Setup & Training",
+        "💬 24/7 VIP Support",
+        "🎨 Complete Customization",
+        "🔧 Advanced Features",
+        "💰 Best Value - Save 50%!",
+      ],
+    },
   ];
 
   return (
