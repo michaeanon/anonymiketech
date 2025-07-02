@@ -280,11 +280,18 @@ export default function Index() {
               © 2024 ANONYMIKETECH - Digital Innovation & Cyber Excellence
             </p>
             <motion.p
-              className="font-tech text-hacker-green"
+              className="font-tech text-hacker-green mb-4"
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               // "In code we trust, in anonymity we thrive" //
+            </motion.p>
+            <motion.p
+              className="font-tech text-hacker-green-dim hover:text-hacker-green transition-colors duration-300"
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              © anonymiketech_inc@2025
             </motion.p>
           </div>
         </motion.footer>
