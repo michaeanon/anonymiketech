@@ -127,50 +127,6 @@ export default function ChatbotsAI() {
         "🔧 Custom Configurations",
       ],
     },
-    {
-      title: "Basic Bot",
-      price: "KSH 5,000",
-      period: "month",
-      features: [
-        "WhatsApp Integration",
-        "Basic AI Responses",
-        "Up to 1,000 Messages",
-        "Simple Commands",
-        "Email Support",
-        "Basic Analytics",
-      ],
-    },
-    {
-      title: "Smart Bot",
-      price: "KSH 15,000",
-      period: "month",
-      popular: true,
-      features: [
-        "Multi-Platform Support",
-        "Advanced AI (GPT-4)",
-        "Up to 10,000 Messages",
-        "Custom Training",
-        "Priority Support",
-        "Advanced Analytics",
-        "Integration APIs",
-        "Voice Messages",
-      ],
-    },
-    {
-      title: "Enterprise AI",
-      price: "KSH 40,000",
-      period: "month",
-      features: [
-        "Unlimited Messages",
-        "Custom AI Training",
-        "Multiple Bot Instances",
-        "CRM Integration",
-        "24/7 Support",
-        "Custom Features",
-        "White-label Solution",
-        "Dedicated Account Manager",
-      ],
-    },
   ];
 
   return (
