@@ -141,7 +141,7 @@ export default function Index() {
         >
           <div className="text-center">
             <motion.h1
-              className="text-6xl md:text-8xl font-tech font-bold glow-text mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-tech font-bold glow-text mb-4"
               animate={{
                 textShadow: [
                   "0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00",
