@@ -125,6 +125,7 @@ export default function Index() {
     <div className="min-h-screen bg-hacker-bg text-hacker-green relative overflow-hidden">
       {/* Mobile Menu */}
       <MobileMenu />
+      <BackToTop />
 
       {/* Matrix Rain Background */}
       <MatrixRain />
