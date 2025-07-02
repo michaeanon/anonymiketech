@@ -15,6 +15,7 @@ import Terminal from "../components/Terminal";
 import ServiceCard from "../components/ServiceCard";
 import ContactButtons from "../components/ContactButtons";
 import MobileMenu from "../components/MobileMenu";
+import BackToTop from "../components/BackToTop";
 
 export default function Index() {
   const [showContent, setShowContent] = useState(false);
