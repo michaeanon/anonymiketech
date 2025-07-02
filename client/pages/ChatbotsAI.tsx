@@ -87,6 +87,47 @@ export default function ChatbotsAI() {
 
   const botPlans = [
     {
+      title: "🔶 BOT PANEL HOSTING",
+      price: "KES 100",
+      period: "setup",
+      features: [
+        "💾 Secure Panel Hosting",
+        "🔒 24/7 Uptime Monitoring",
+        "⚡ Fast Server Performance",
+        "🛡️ DDoS Protection",
+        "📊 Basic Analytics",
+        "💬 Email Support",
+      ],
+    },
+    {
+      title: "🔷 BOT PANEL DEPLOYMENT",
+      price: "KES 150",
+      period: "service",
+      features: [
+        "🚀 Complete Bot Deployment",
+        "⚙️ Configuration Setup",
+        "🔧 Custom Integration",
+        "📱 WhatsApp Connection",
+        "✅ Testing & Validation",
+        "📋 Documentation Provided",
+      ],
+    },
+    {
+      title: "🔷 PANEL SERVER",
+      price: "KES 150",
+      period: "monthly",
+      popular: true,
+      features: [
+        "🖥️ Dedicated Panel Server",
+        "🔄 Auto-scaling Resources",
+        "📈 Performance Monitoring",
+        "🔐 Enhanced Security",
+        "⚡ Priority Support",
+        "📊 Advanced Analytics",
+        "🔧 Custom Configurations",
+      ],
+    },
+    {
       title: "Basic Bot",
       price: "KSH 5,000",
       period: "month",
