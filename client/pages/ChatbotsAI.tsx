@@ -5,6 +5,7 @@ import ServiceHero from "../components/ServiceHero";
 import PricingCard from "../components/PricingCard";
 import ContactButtons from "../components/ContactButtons";
 import MobileMenu from "../components/MobileMenu";
+import BackToTop from "../components/BackToTop";
 
 export default function ChatbotsAI() {
   const features = [
