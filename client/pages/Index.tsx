@@ -22,47 +22,13 @@ export default function Index() {
   const [showContent, setShowContent] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
 
-  useEffect(() => {
-    // Play hacker sound effect on load
-    const playHackerSound = () => {
-      const audioContext = new (window.AudioContext ||
-        (window as any).webkitAudioContext)();
-
-      // Create a simple beep sound effect
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-
-      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-      oscillator.frequency.exponentialRampToValueAtTime(
-        200,
-        audioContext.currentTime + 0.1,
-      );
-
-      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(
-        0.01,
-        audioContext.currentTime + 0.5,
-      );
-
-      oscillator.start(audioContext.currentTime);
-      oscillator.stop(audioContext.currentTime + 0.5);
-    };
-
-    // Delayed content reveal for dramatic effect
-    const timer = setTimeout(() => {
+  const handleLoaderComplete = () => {
+    setShowLoader(false);
+    // Small delay then show main content
+    setTimeout(() => {
       setShowContent(true);
-      try {
-        playHackerSound();
-      } catch (error) {
-        console.log("Audio playback failed:", error);
-      }
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
+    }, 500);
+  };
 
   const services = [
     {
