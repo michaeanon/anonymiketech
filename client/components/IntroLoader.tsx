@@ -12,13 +12,13 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
 
   const hackingSequence = [
     "INITIALIZING SYSTEM...",
-    "LOADING HACKER PROTOCOLS...",
-    "CONNECTING TO DARKNET...",
-    "BYPASSING FIREWALL...",
-    "DECRYPTING DATA...",
-    "ACCESSING MAINFRAME...",
+    "LOADING SECURITY PROTOCOLS...",
+    "ESTABLISHING SECURE CONNECTION...",
+    "VERIFYING CREDENTIALS...",
+    "OPTIMIZING PERFORMANCE...",
+    "CONFIGURING SERVICES...",
     "ANONYMIKETECH SYSTEMS ONLINE",
-    "WELCOME TO THE MATRIX...",
+    "WELCOME TO ANONYMIKETECH WORLD",
   ];
 
   const matrixChars = "01ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
