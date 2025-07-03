@@ -90,16 +90,21 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-hacker-bg text-hacker-green relative overflow-hidden">
-      {/* Mobile Menu */}
-      <MobileMenu />
-      <BackToTop />
+    <>
+      {/* Intro Loader */}
+      {showLoader && <IntroLoader onComplete={handleLoaderComplete} />}
 
-      {/* Matrix Rain Background */}
-      <MatrixRain />
+      {/* Main Website Content */}
+      <div className="min-h-screen bg-hacker-bg text-hacker-green relative overflow-hidden">
+        {/* Mobile Menu */}
+        <MobileMenu />
+        <BackToTop />
 
-      {/* Main Content */}
-      <div className="relative z-10">
+        {/* Matrix Rain Background */}
+        <MatrixRain />
+
+        {/* Main Content */}
+        <div className="relative z-10">
         {/* Header */}
         <motion.header
           initial={{ opacity: 0, y: -50 }}
