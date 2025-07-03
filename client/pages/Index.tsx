@@ -36,6 +36,9 @@ export default function Index() {
   }, []);
 
   const handleLoaderComplete = () => {
+    // Mark intro as seen in this session
+    sessionStorage.setItem("anonymiketech_intro_seen", "true");
+
     setShowLoader(false);
     // Small delay then show main content
     setTimeout(() => {
