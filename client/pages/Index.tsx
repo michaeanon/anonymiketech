@@ -20,7 +20,20 @@ import IntroLoader from "../components/IntroLoader";
 
 export default function Index() {
   const [showContent, setShowContent] = useState(false);
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
+
+  useEffect(() => {
+    // Check if intro has already been shown in this session
+    const hasSeenIntro = sessionStorage.getItem("anonymiketech_intro_seen");
+
+    if (!hasSeenIntro) {
+      // First visit - show the intro loader
+      setShowLoader(true);
+    } else {
+      // Already seen intro - go straight to content
+      setShowContent(true);
+    }
+  }, []);
 
   const handleLoaderComplete = () => {
     setShowLoader(false);
