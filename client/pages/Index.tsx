@@ -27,10 +27,12 @@ export default function Index() {
     const hasSeenIntro = sessionStorage.getItem("anonymiketech_intro_seen");
 
     if (!hasSeenIntro) {
-      // First visit - show the intro loader
+      // First visit ever - show the intro loader
       setShowLoader(true);
+      setShowContent(false);
     } else {
-      // Already seen intro - go straight to content
+      // Already seen intro in this session - skip to content immediately
+      setShowLoader(false);
       setShowContent(true);
     }
   }, []);
