@@ -16,6 +16,7 @@ import ServiceCard from "../components/ServiceCard";
 import ContactButtons from "../components/ContactButtons";
 import MobileMenu from "../components/MobileMenu";
 import BackToTop from "../components/BackToTop";
+import IntroLoader from "../components/IntroLoader";
 
 export default function Index() {
   const [showContent, setShowContent] = useState(false);
