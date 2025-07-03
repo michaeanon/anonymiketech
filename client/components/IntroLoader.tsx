@@ -139,7 +139,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
       }
     };
 
-    playHackerSounds();
+    playTypingSounds();
   }, []);
 
   useEffect(() => {
