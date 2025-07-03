@@ -20,6 +20,7 @@ import IntroLoader from "../components/IntroLoader";
 
 export default function Index() {
   const [showContent, setShowContent] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     // Play hacker sound effect on load
