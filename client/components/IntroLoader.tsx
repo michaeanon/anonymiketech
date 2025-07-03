@@ -10,6 +10,16 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
   const [loadingText, setLoadingText] = useState("");
   const [isVisible, setIsVisible] = useState(true);
 
+  // Double-check if intro should run
+  useEffect(() => {
+    const hasSeenIntro = sessionStorage.getItem("anonymiketech_intro_seen");
+    if (hasSeenIntro) {
+      // If intro was already seen, immediately complete
+      onComplete();
+      return;
+    }
+  }, [onComplete]);
+
   const hackingSequence = [
     "INITIALIZING SYSTEM...",
     "LOADING SECURITY PROTOCOLS...",
