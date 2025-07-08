@@ -3,7 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Shield, Code, Bot, TrendingUp, Home } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function MobileMenu() {
+interface MobileMenuProps {
+  showAfterIntro?: boolean;
+}
+
+export default function MobileMenu({ showAfterIntro = true }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
@@ -57,7 +61,7 @@ export default function MobileMenu() {
     },
   ];
 
-  if (!isMobile) return null;
+  if (!isMobile || !showAfterIntro) return null;
 
   return (
     <>
