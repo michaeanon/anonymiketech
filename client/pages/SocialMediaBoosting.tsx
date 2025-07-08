@@ -279,6 +279,65 @@ export default function SocialMediaBoosting() {
           </div>
         </section>
 
+        {/* Video Demonstration Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-4xl md:text-5xl font-tech font-bold text-center mb-16 glow-text"
+            >
+              // WATCH OUR SERVICES IN ACTION
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="max-w-4xl mx-auto mb-8"
+            >
+              <div className="glow-border rounded-lg p-6 bg-hacker-terminal/50 backdrop-blur-sm">
+                <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden">
+                  <iframe
+                    allow="fullscreen;autoplay"
+                    allowFullScreen
+                    height="100%"
+                    src="https://streamable.com/e/7c03fs?autoplay=1&muted=1"
+                    width="100%"
+                    style={{
+                      border: "none",
+                      width: "100%",
+                      height: "100%",
+                      position: "absolute",
+                      left: "0px",
+                      top: "0px",
+                      overflow: "hidden",
+                    }}
+                    className="rounded-lg"
+                  />
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="text-center mt-6"
+                >
+                  <h3 className="text-xl font-tech font-bold text-hacker-green-bright mb-2 glow-text">
+                    🚀 Real Results, Real Growth
+                  </h3>
+                  <p className="text-hacker-green-dim leading-relaxed">
+                    See how our social media boosting services deliver instant,
+                    authentic engagement across all platforms. Professional
+                    growth that gets noticed!
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Platforms Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
