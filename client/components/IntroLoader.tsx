@@ -42,104 +42,112 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
   };
 
   useEffect(() => {
-    // Play typing sound effects
-    const playTypingSounds = () => {
-      const audioContext = new (window.AudioContext ||
-        (window as any).webkitAudioContext)();
+    // Detect if device is mobile
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
 
-      // Main typing sound
-      const playKeyPress = (frequency = 800, duration = 0.08) => {
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
+    // Only play sound on desktop devices
+    if (!isMobile) {
+      const playTypingSounds = () => {
+        const audioContext = new (window.AudioContext ||
+          (window as any).webkitAudioContext)();
 
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
+        // Main typing sound
+        const playKeyPress = (frequency = 800, duration = 0.08) => {
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
 
-        oscillator.frequency.setValueAtTime(
-          frequency,
-          audioContext.currentTime,
-        );
-        gainNode.gain.setValueAtTime(0.08, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(
-          0.01,
-          audioContext.currentTime + duration,
-        );
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
 
-        oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + duration);
-      };
+          oscillator.frequency.setValueAtTime(
+            frequency,
+            audioContext.currentTime,
+          );
+          gainNode.gain.setValueAtTime(0.08, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(
+            0.01,
+            audioContext.currentTime + duration,
+          );
 
-      // Typing sound with random variations
-      const playRandomKeyPress = () => {
-        const frequencies = [700, 750, 800, 850, 900, 950];
-        const frequency =
-          frequencies[Math.floor(Math.random() * frequencies.length)];
-        const duration = 0.06 + Math.random() * 0.04; // 0.06 to 0.1 seconds
-        playKeyPress(frequency, duration);
-      };
-
-      // Space bar sound (longer, lower frequency)
-      const playSpaceBar = () => {
-        playKeyPress(400, 0.12);
-      };
-
-      // Enter key sound (distinctive)
-      const playEnterKey = () => {
-        playKeyPress(600, 0.15);
-      };
-
-      try {
-        // Continuous typing sounds during the intro
-        const typingPattern = () => {
-          // Fast typing burst
-          for (let i = 0; i < 3 + Math.random() * 4; i++) {
-            setTimeout(
-              () => playRandomKeyPress(),
-              i * (60 + Math.random() * 40),
-            );
-          }
-
-          // Occasional space or enter
-          if (Math.random() > 0.7) {
-            setTimeout(
-              () => {
-                if (Math.random() > 0.5) {
-                  playSpaceBar();
-                } else {
-                  playEnterKey();
-                }
-              },
-              300 + Math.random() * 200,
-            );
-          }
+          oscillator.start(audioContext.currentTime);
+          oscillator.stop(audioContext.currentTime + duration);
         };
 
-        // Start typing sounds immediately
-        typingPattern();
+        // Typing sound with random variations
+        const playRandomKeyPress = () => {
+          const frequencies = [700, 750, 800, 850, 900, 950];
+          const frequency =
+            frequencies[Math.floor(Math.random() * frequencies.length)];
+          const duration = 0.06 + Math.random() * 0.04; // 0.06 to 0.1 seconds
+          playKeyPress(frequency, duration);
+        };
 
-        // Continue typing throughout the loading sequence
-        const typingInterval = setInterval(
-          () => {
-            if (stage < hackingSequence.length) {
-              typingPattern();
-            } else {
-              clearInterval(typingInterval);
+        // Space bar sound (longer, lower frequency)
+        const playSpaceBar = () => {
+          playKeyPress(400, 0.12);
+        };
+
+        // Enter key sound (distinctive)
+        const playEnterKey = () => {
+          playKeyPress(600, 0.15);
+        };
+
+        try {
+          // Continuous typing sounds during the intro
+          const typingPattern = () => {
+            // Fast typing burst
+            for (let i = 0; i < 3 + Math.random() * 4; i++) {
+              setTimeout(
+                () => playRandomKeyPress(),
+                i * (60 + Math.random() * 40),
+              );
             }
-          },
-          400 + Math.random() * 300,
-        );
 
-        // Final enter key at completion
-        setTimeout(() => {
-          playEnterKey();
-          setTimeout(() => playEnterKey(), 200); // Double enter for completion
-        }, 4800);
-      } catch (error) {
-        console.log("Audio playback failed:", error);
-      }
-    };
+            // Occasional space or enter
+            if (Math.random() > 0.7) {
+              setTimeout(
+                () => {
+                  if (Math.random() > 0.5) {
+                    playSpaceBar();
+                  } else {
+                    playEnterKey();
+                  }
+                },
+                300 + Math.random() * 200,
+              );
+            }
+          };
 
-    playTypingSounds();
+          // Start typing sounds immediately
+          typingPattern();
+
+          // Continue typing throughout the loading sequence
+          const typingInterval = setInterval(
+            () => {
+              if (stage < hackingSequence.length) {
+                typingPattern();
+              } else {
+                clearInterval(typingInterval);
+              }
+            },
+            400 + Math.random() * 300,
+          );
+
+          // Final enter key at completion
+          setTimeout(() => {
+            playEnterKey();
+            setTimeout(() => playEnterKey(), 200); // Double enter for completion
+          }, 2400);
+        } catch (error) {
+          console.log("Audio playback failed:", error);
+        }
+      };
+
+      playTypingSounds();
+    }
   }, []);
 
   useEffect(() => {
@@ -151,18 +159,18 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
         const text = hackingSequence[i];
         for (let j = 0; j <= text.length; j++) {
           setLoadingText(text.substring(0, j));
-          await new Promise((resolve) => setTimeout(resolve, 50));
+          await new Promise((resolve) => setTimeout(resolve, 30));
         }
 
         // Wait before next stage
-        await new Promise((resolve) => setTimeout(resolve, 400));
+        await new Promise((resolve) => setTimeout(resolve, 250));
       }
 
       // Wait a bit then start exit animation
       setTimeout(() => {
         setIsVisible(false);
-        setTimeout(onComplete, 1000); // Wait for exit animation
-      }, 1000);
+        setTimeout(onComplete, 600); // Wait for exit animation
+      }, 500);
     };
 
     sequence();
