@@ -430,10 +430,10 @@ export default function SocialMediaBoosting() {
               transition={{ duration: 1 }}
               className="text-4xl md:text-5xl font-tech font-bold text-center mb-16 glow-text"
             >
-              // GROWTH PACKAGES
+              // SOCIAL MEDIA BOOSTING SERVICES
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
               {socialPlans.map((plan, index) => (
                 <PricingCard
                   key={index}
