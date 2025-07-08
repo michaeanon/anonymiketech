@@ -10,6 +10,12 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=36FF69&vCenter=true&center=true&width=500&lines=COOKING+SOMETHING...;Designing+With+innovation!;Deploying+Elegance!" alt="Typing SVG" />
 </h1>
 
+<!-- 🎯 https://i.ibb.co/qfbjHYK/Whats-App-Image-2025-06-30-at-3-43-38-PM.jpg -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/anonymike/anonymiketech/main/public/A_GitHub_README.md_file_for_a_technology_company_n.png" width="600" alt="Anonymiketech AI Banner" />
+</p>
+
 <p align="center">
   <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" width="400"/>
 </p>
@@ -48,10 +54,6 @@
 
 1. 📦 Auto-push to [GitHub Repo](https://github.com/anonymike/anonymiketech)
 
-
----
-
-
 ---
 
 ### 📸 Screenshots
@@ -68,7 +70,6 @@
 - 📢 [WhatsApp Channel](https://whatsapp.com/channel/0029Vb4woXa17En19MxCLg32)
 - 🌐 [Live Website](https://anonymiketech.surge.sh)
 
-
 ---
 
 ### 🙌 Made with passion & innovation
@@ -82,9 +83,6 @@
 > **📣 Star this repo** if you love what we’re building!  
 > _Let’s bring African tech to the world._
 
-
-
 ---
 
-### 📁 Project Structure (React + CSS + java script)
-
+### 📁 Project Structure (React + CSS + JavaScript)
