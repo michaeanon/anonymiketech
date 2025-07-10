@@ -12,6 +12,7 @@ import InternetServices from "./pages/InternetServices";
 import WebDevelopment from "./pages/WebDevelopment";
 import ChatbotsAI from "./pages/ChatbotsAI";
 import SocialMediaBoosting from "./pages/SocialMediaBoosting";
+import PaymentCallback from "./pages/PaymentCallback";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             path="/social-media-boosting"
             element={<SocialMediaBoosting />}
           />
+          <Route path="/payment-callback" element={<PaymentCallback />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
