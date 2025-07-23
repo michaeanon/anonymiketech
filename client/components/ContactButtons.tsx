@@ -26,12 +26,6 @@ const contactLinks = [
     icon: <Users className="w-6 h-6" />,
     description: "Community",
   },
-  {
-    name: "Make Payment",
-    url: "https://anonymiketech-checkouts.vercel.app/",
-    icon: <CreditCard className="w-6 h-6" />,
-    description: "Secure checkout",
-  },
 ];
 
 export default function ContactButtons() {
