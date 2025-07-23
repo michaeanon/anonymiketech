@@ -87,7 +87,7 @@ export default function PricingCard({
         className="text-center"
       >
         <a
-          href={generateWhatsAppMessage()}
+          href={paymentUrl}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-block w-full py-4 px-6 rounded-lg font-tech font-bold transition-all duration-300 text-center ${
