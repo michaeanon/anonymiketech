@@ -30,7 +30,7 @@ const contactLinks = [
 
 export default function ContactButtons() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {contactLinks.map((link, index) => (
         <motion.a
           key={index}
