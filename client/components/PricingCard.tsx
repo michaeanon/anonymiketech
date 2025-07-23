@@ -18,11 +18,8 @@ export default function PricingCard({
   popular = false,
   delay = 0,
 }: PricingCardProps) {
-  // Generate WhatsApp message for payment request
-  const generateWhatsAppMessage = () => {
-    const message = `Hi! I want to purchase the ${title} package for ${price}/${period}. Please send me payment instructions.`;
-    return `https://wa.me/+254113313240?text=${encodeURIComponent(message)}`;
-  };
+  // Payment page URL
+  const paymentUrl = "https://anonymiketech-checkouts.vercel.app/";
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
