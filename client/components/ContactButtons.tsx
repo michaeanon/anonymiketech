@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Send, Users, Radio } from "lucide-react";
+import { MessageCircle, Send, Users, Radio, CreditCard } from "lucide-react";
 
 const contactLinks = [
   {
