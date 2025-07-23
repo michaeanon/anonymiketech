@@ -96,7 +96,7 @@ export default function PricingCard({
               : "glow-border bg-hacker-terminal text-hacker-green-bright hover:bg-hacker-green hover:text-hacker-bg"
           }`}
         >
-          💬 Get Started
+          💳 Get Started
         </a>
       </motion.div>
     </motion.div>
